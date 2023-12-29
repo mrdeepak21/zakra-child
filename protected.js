@@ -3,7 +3,7 @@ const page = slug[slug.length-2];
 const _password = 'cobra1@#';
 const already_loggedin = Boolean(getCookie('_protected_loggedIn'));
 
-if(!already_loggedin && page!=='contact-us-1' && page!=='') {
+if(!already_loggedin && page!=='contact-us-1' && page!=='' && page!=='thank-you') {
     if(_password !== prompt('Please enter password')){
         window.location.reload();
     } else {
