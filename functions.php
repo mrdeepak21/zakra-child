@@ -3,6 +3,7 @@
  * Child theme functions file
  * 
  */
+
 function zakra_child_enqueue_styles() {
 
 	$parent_style = 'zakra-style'; //parent theme style handle 'zakra-style'
@@ -14,7 +15,8 @@ function zakra_child_enqueue_styles() {
 	    array( $parent_style ),
 	    wp_get_theme()->get('Version')
 	);
-	wp_enqueue_script( 'custom',  get_stylesheet_directory_uri() . '/script.js',true,'1.0');
+	wp_enqueue_script( 'custom',  get_stylesheet_directory_uri() . '/script.js',true,array('jQuery'),'1.0');
+	wp_enqueue_script( 'protected',  get_stylesheet_directory_uri() . '/protected.js',true,'1.0');
 }
 add_action( 'wp_enqueue_scripts', 'zakra_child_enqueue_styles' );
 
@@ -63,14 +65,14 @@ add_action('wp_footer',function (){
 	if($page_slug=='brokers' || $page_slug=='employers' || $page_slug=='individuals' || $page_slug=='general-agents') {
 echo '<script>
 function setCookie(name,value,days) {
-    var expires = "";
-    if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days*24*60*60*1000));
-        expires = "; expires=" + date.toUTCString();
-    }
-    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
-}
+	var expires = "";
+	if (days) {
+		var date = new Date();
+		date.setTime(date.getTime() + (days*24*60*60*1000));
+		expires = "; expires=" + date.toUTCString();
+	}
+	document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+  }
 setCookie(`_page_name`,`'.$page_slug.'`,7);
 </script>';
 	}
