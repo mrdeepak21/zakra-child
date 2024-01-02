@@ -23,8 +23,8 @@ function animateWords(element) {
         word.classList.add('visible');            
         setTimeout(()=>{
             word.classList.contains('mark')?(word.classList.add('highlight')):null; 
-        },(arr.length-1)*600+100);
-        }, index * 600); // Adjust the delay as needed
+        },(arr.length-1)*500+100);
+        }, index * 500); // Adjust the delay as needed
     });
 }
 });
