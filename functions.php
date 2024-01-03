@@ -34,7 +34,7 @@ add_shortcode('animated_services',function(){
 });
 
 add_action('wp_footer',function(){
-	if( is_front_page() || $_SERVER['REQUEST_URI']=="/coming-soon/"){
+	if( is_front_page() || $_SERVER['REQUEST_URI']=="/coming-soon/" || $_SERVER['REQUEST_URI']=="/home/"){
 	echo "<script>
 	const words = document.querySelectorAll('.word');
 let index = 0;
