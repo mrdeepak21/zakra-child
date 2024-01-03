@@ -211,3 +211,9 @@ add_action( 'elementor_pro/forms/validation/email', function( $field, $record, $
 
 }, 10, 3 );
 //Only Allow Business Email - end
+
+
+//Current Year
+add_shortcode('_current_year',function(){
+	return date('Y');
+});
