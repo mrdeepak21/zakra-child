@@ -125,7 +125,18 @@ $the_query = new WP_Query(array( 'post_type' =>'timeline', 'post_status'=> 'publ
 			<div class="timeline__content">
           <p><?php the_content(); ?></p>
           <h2><?php the_title() ?></h2>
-			<a href="<?php echo get_post_meta(get_the_id(), 'timeline_learn_more', true); ?>" target="_blank" class="learn_more">Learn more</a>
+			<div class="elementor-element str-btn elementor-widget elementor-widget-button" data-element_type="widget"
+	data-widget_type="button.default">
+	<div class="elementor-widget-container">
+		<div class="elementor-button-wrapper">
+			<a class="elementor-button elementor-button-link elementor-size-sm" href="<?php echo get_post_meta(get_the_id(), 'timeline_learn_more', true); ?>" target="_blank">
+				<span class="elementor-button-content-wrapper">
+					<span class="elementor-button-text">Learn More</span>
+				</span>
+			</a>
+		</div>
+	</div>
+</div>
 			</div>
         </div>
       </div>
