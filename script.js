@@ -43,6 +43,9 @@ function animateWords(element) {
  * keyCode 37,38,39,40  Arrows
  * keyCode 10           (LF)
  */
+
+const myfield = document.getElementById("form-field-phone");
+
 function validate_int(myEvento) {
     if ((myEvento.charCode >= 48 && myEvento.charCode <= 57) || myEvento.keyCode == 9 || myEvento.keyCode == 10 || myEvento.keyCode == 13 || myEvento.keyCode == 8 || myEvento.keyCode == 116 || myEvento.keyCode == 46 || (myEvento.keyCode <= 40 && myEvento.keyCode >= 37)) {
       dato = true;
@@ -54,7 +57,7 @@ function validate_int(myEvento) {
   
   function phone_number_mask() {
     var myMask = "___-___-____";
-    var myCaja = document.getElementById("form-field-phone");
+    var myCaja = myfield;
     var myText = "";
     var myNumbers = [];
     var myOutPut = ""
@@ -79,10 +82,10 @@ function validate_int(myEvento) {
         myOutPut = myOutPut + myMask.charAt(j);
       }
     }
-    document.getElementById("form-field-phone").value = myOutPut;
-    document.getElementById("form-field-phone").setSelectionRange(theLastPos, theLastPos);
+    myfield.value = myOutPut;
+    myfield.setSelectionRange(theLastPos, theLastPos);
   }
   
-  document.getElementById("form-field-phone").onkeypress = validate_int;
-  document.getElementById("form-field-phone").onkeyup = phone_number_mask;
-  document.getElementById("form-field-phone").setAttribute('title','Phone format: ###-###-####');
+  myfield.onkeypress = validate_int;
+  myfield.setAttribute('title','Phone format: ###-###-####');
+  myfield.onkeyup = phone_number_mask;

@@ -15,7 +15,7 @@ function zakra_child_enqueue_styles() {
 	    array( $parent_style ),
 	    wp_get_theme()->get('Version')
 	);
-	wp_enqueue_script( 'custom',  get_stylesheet_directory_uri() . '/script.js',array( 'jquery' ),'1.0');
+	wp_enqueue_script( 'custom',  get_stylesheet_directory_uri() . '/script.js',array( 'jquery' ),'1.0',['strategy'=>'defer']);
 	// wp_enqueue_script( 'protected',  get_stylesheet_directory_uri() . '/protected.js',true,'1.0');
 }
 add_action( 'wp_enqueue_scripts', 'zakra_child_enqueue_styles' );
