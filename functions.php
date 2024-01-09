@@ -224,6 +224,16 @@ add_action( 'elementor_pro/forms/validation/email', function( $field, $record, $
 //Only Allow Business Email - end
 
 
+
+//elementor form Phone validation
+add_action( 'elementor_pro/forms/validation/tel', function ( $field, $record, $ajax_handler ) {
+    if ( 1 !== preg_match( '/[0-9]{3}-[0-9]{3}-[0-9]{4}/', $field['value'] )) {
+        $ajax_handler->add_error( $field['id'], 'Phone format: ###-###-####' );
+    }
+}, 10, 3 );
+
+
+
 //Current Year
 add_shortcode('_current_year',function(){
 	return date('Y');
