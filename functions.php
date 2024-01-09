@@ -34,7 +34,11 @@ add_shortcode('animated_services',function(){
 });
 
 add_action('wp_footer',function(){
+<<<<<<< HEAD
 	if( is_front_page() || $_SERVER['REQUEST_URI']=="/coming-soon/" || $_SERVER['REQUEST_URI']=="/home/"){
+=======
+	if( is_front_page() || $_SERVER['REQUEST_URI']=="/coming-soon/"|| $_SERVER['REQUEST_URI']=="/home/"){
+>>>>>>> 50a2c66ab08529178f64133c907db0a8430a9caa
 	echo "<script>
 	const words = document.querySelectorAll('.word');
 let index = 0;
@@ -222,6 +226,7 @@ add_action( 'elementor_pro/forms/validation/email', function( $field, $record, $
 
 }, 10, 3 );
 //Only Allow Business Email - end
+<<<<<<< HEAD
 
 
 
@@ -238,3 +243,5 @@ add_action( 'elementor_pro/forms/validation/tel', function ( $field, $record, $a
 add_shortcode('_current_year',function(){
 	return date('Y');
 });
+=======
+>>>>>>> 50a2c66ab08529178f64133c907db0a8430a9caa
