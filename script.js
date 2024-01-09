@@ -83,6 +83,6 @@ function validate_int(myEvento) {
     document.getElementById("form-field-phone").setSelectionRange(theLastPos, theLastPos);
   }
   
-  document.getElementById("form-field-phone").onkeypress = validate_int;
+  document.getElementById("form-field-phone").onkeydown = validate_int;
   document.getElementById("form-field-phone").onkeyup = phone_number_mask;
   document.getElementById("form-field-phone").setAttribute('title','Phone format: ###-###-####');
