@@ -54,7 +54,7 @@ function validate_int(myEvento) {
   
   function phone_number_mask() {
     var myMask = "___-___-____";
-    var myCaja = document.getElementById("form-field-phonenumber");
+    var myCaja = document.getElementById("form-field-phone");
     var myText = "";
     var myNumbers = [];
     var myOutPut = ""
@@ -79,10 +79,10 @@ function validate_int(myEvento) {
         myOutPut = myOutPut + myMask.charAt(j);
       }
     }
-    document.getElementById("form-field-phonenumber").value = myOutPut;
-    document.getElementById("form-field-phonenumber").setSelectionRange(theLastPos, theLastPos);
+    document.getElementById("form-field-phone").value = myOutPut;
+    document.getElementById("form-field-phone").setSelectionRange(theLastPos, theLastPos);
   }
   
-  document.getElementById("form-field-phonenumber").onkeypress = validate_int;
-  document.getElementById("form-field-phonenumber").onkeyup = phone_number_mask;
-  document.getElementById("form-field-phonenumber").setAttribute('title','Phone format: ###-###-####');
+  document.getElementById("form-field-phone").onkeypress = validate_int;
+  document.getElementById("form-field-phone").onkeyup = phone_number_mask;
+  document.getElementById("form-field-phone").setAttribute('title','Phone format: ###-###-####');
