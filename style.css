@@ -87,17 +87,16 @@ button[type='submit']:hover {
 
 .mark:after{
   content: '';
-  padding: 5px 10px;
   border-radius: 30px;
   background: linear-gradient(90deg, var(--e-global-color-primary) 50%, rgba(255, 255, 255, 0) 50%);
   background-size: 200% 100%;
   background-position: 100% 0;
   transition: background-position .5s cubic-bezier(.075, .82, .165, 1);
-  width: 110%;
-  height: 110%;
+  width: 103%;
+  height: 102%;
   position: absolute;
-  left: -5%;
-  bottom: -10%;
+  left: -1.5%;
+  bottom: -1%;
   z-index: -1;
 }
 
