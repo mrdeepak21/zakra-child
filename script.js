@@ -18,13 +18,13 @@ const observer = new IntersectionObserver(entries => {
 // Animation function
 function animateWords(element) {
     const words = element.querySelectorAll('.word-slide');
-    words.forEach((word, index,arr) => {
-        setTimeout(() => {
-        word.classList.add('visible');            
-        setTimeout(()=>{
-            word.classList.contains('mark')?(word.classList.add('highlight')):null; 
-        },(arr.length-1)*500+100);
-        }, index * 500); // Adjust the delay as needed
+    words.forEach((word,index,arr) => {
+      word.style.transitionDelay=`0.${index+1}s`;   
+      word.classList.add('visible'); 
+      if(word.classList.contains('mark'))
+     { setTimeout(function (){
+    word.classList.add('highlighted');
+    },arr.length*100+500);}
     });
 }
 });
