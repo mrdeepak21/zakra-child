@@ -9,28 +9,17 @@ const observer = new IntersectionObserver(entries => {
     });
 });
 
-
  // Observe all elements with the "word-slide-container" class
  document.querySelectorAll('.word-slide-container .elementor-heading-title,.word-slide-container .elementor-cta__title,.word-slide-container .elementor-icon-box-title,.word-slide-container .elementor-image-box-title').forEach(container => {
     observer.observe(container);
   });
 
-// Animation function
-function animateWords(element) {
-    const words = element.querySelectorAll('.word-slide');
-    words.forEach((word,index,arr) => {
-      word.style.transitionDelay=`0.${index+1}s`;   
-      word.classList.add('visible'); 
-      if(word.classList.contains('mark'))
-     { setTimeout(function (){
-    word.classList.add('highlighted');
-    },arr.length*100+500);}
-    });
-}
-
 
 //close cookie
 jQuery('#accept-all-btn').click(hideCookieBox);
+
+//AutoHideCookieBox
+setTimeout(hideCookieBox,30000);
 });
 
 function randomString(length,allChars=true) {
@@ -51,6 +40,18 @@ hideCookieBox = ()=> {
   document.cookie = "cookieyes-consent=consentid:"+randomString(32)+",consent:yes,action:yes,necessary:yes,functional:yes,analytics:yes,performance:yes,advertisement:yes; "+expires+"; path=/";
 }
 
+// Animation function
+function animateWords(element) {
+  const words = element.querySelectorAll('.word-slide');
+  words.forEach((word,index,arr) => {
+    word.style.transitionDelay=`0.${index+1}s`;   
+    word.classList.add('visible'); 
+    if(word.classList.contains('mark'))
+   { setTimeout(function (){
+  word.classList.add('highlighted');
+  },arr.length*100+500);}
+  });
+}
 
 // ----------------------------------------------------------------------------------------------------------------
 /**
