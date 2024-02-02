@@ -13,8 +13,10 @@ Version: 1.0
   text-decoration: none!important;
 }
 .cky-consent-container .cky-consent-bar{
-background-color:#121212F9!important;
+background-color:#121212F0!important;
+box-shadow: 0 -1px 10px 0 #000000c2!important;
 }
+
 .cky-btn-do-not-sell{
 	display:none!important;
 }
