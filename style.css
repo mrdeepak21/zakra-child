@@ -9,6 +9,19 @@ Version: 1.0
 */
 
 
+.cky-notice-des a.cky-policy, .cky-notice-des button.cky-policy{
+  text-decoration: none!important;
+}
+.cky-consent-container .cky-consent-bar{
+background-color:#121212F9!important;
+}
+.cky-btn-do-not-sell{
+	display:none!important;
+}
+.cky-btn{
+	padding: 10px 40px!important;
+	border-radius: 15px;
+}
 
 
 /* Mega Menu */

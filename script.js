@@ -1,4 +1,4 @@
-jQuery(document).ready(()=>{
+jQuery(document).ready(($)=>{
 // Intersection Observer
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -27,9 +27,27 @@ function animateWords(element) {
     },arr.length*100+500);}
     });
 }
+
+
+//close cookie
+jQuery('#accept-all-btn').click(()=>{
+  jQuery('.cky-consent-container ').addClass('cky-hide');
+  const d = new Date();
+  d.setTime(d.getTime() + (365*24*60*60*1000));
+  let expires = "expires="+ d.toUTCString();
+  document.cookie = "cookieyes-consent=consentid:"+randomString(32)+",consent:yes,action:yes,necessary:yes,functional:yes,analytics:yes,performance:yes,advertisement:yes; "+expires+"; path=/";
+});
 });
 
-
+function randomString(length,allChars=true) {
+  const chars = `${allChars ? `0123456789` : ""
+}ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghiklmnopqrstuvwxyz`;
+const response = [];
+for (let i = 0; i < length; i++)
+response.push(chars[Math.floor(Math.random() * chars.length)]);
+if (!allChars) return response.join("");
+return btoa(response.join("")).replace(/\=+$/, "");
+}
 
 
 // ----------------------------------------------------------------------------------------------------------------
