@@ -12,6 +12,13 @@ Version: 1.0
 .cky-notice-des a.cky-policy, .cky-notice-des button.cky-policy{
   text-decoration: none!important;
 }
+
+@media (min-width:1025px){
+  .cky-consent-container{
+    width: 840px!important;
+  }
+}
+
 .cky-consent-container .cky-consent-bar{
 background-color:#121212F0!important;
 box-shadow: 0 -1px 10px 0 #000000c2!important;
