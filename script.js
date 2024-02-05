@@ -44,7 +44,7 @@ hideCookieBox = ()=> {
 function animateWords(element) {
   const words = element.querySelectorAll('.word-slide');
   words.forEach((word,index,arr) => {
-    word.style.transitionDelay=`0.${index+1}s`;   
+    word.style.transitionDelay=`${(index+1)/10}s`;   
     word.classList.add('visible'); 
     if(word.classList.contains('mark'))
    { setTimeout(function (){
