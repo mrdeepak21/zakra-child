@@ -38,6 +38,13 @@ box-shadow: 0 -1px 10px 0 #000000c2!important;
   color: #fe7221; 
   text-align: center;
   border:2px solid #ffffff;
+  background-color: #f9f9f9;
+  font-weight: 400;
+}
+
+.cky-notice-btn-wrapper .cky-btn:hover{
+  background-color: transparent;
+  border-color: #ffffff;
 }
 
 
