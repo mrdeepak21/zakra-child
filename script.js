@@ -19,7 +19,7 @@ jQuery(document).ready(() => {
   jQuery('#accept-all-btn').click(hideCookieBox);
 
   //AutoHideCookieBox
-  setTimeout(hideCookieBox, 30000);
+  // setTimeout(hideCookieBox, 30000);
 
 
   //nav highlighter
