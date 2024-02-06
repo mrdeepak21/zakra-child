@@ -45,6 +45,7 @@ box-shadow: 0 -1px 10px 0 #000000c2!important;
 .cky-notice-btn-wrapper .cky-btn:hover{
   background-color: transparent;
   border-color: #ffffff;
+  color: #ffffff;
 }
 
 
