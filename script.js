@@ -24,8 +24,6 @@ jQuery(document).ready(() => {
 
   //nav highlighter
   navHighlighter();
-  // Get all sections that have an ID defined
-  const sections = document.querySelectorAll("section[id]");
 
   // Add an event listener listening for scroll
   window.addEventListener("scroll", navHighlighter);
@@ -36,6 +34,8 @@ jQuery(document).ready(() => {
 
 
 function navHighlighter() {
+    // Get all sections that have an ID defined
+  const sections = document.querySelectorAll("section[id]");
 
   // Get current scroll position
   let scrollY = window.pageYOffset;
