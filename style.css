@@ -19,9 +19,12 @@ Version: 1.0
   }
 }
 
+
+
 .cky-consent-container .cky-consent-bar{
 background-color:#121212F0!important;
 box-shadow: 0 -1px 10px 0 #000000c2!important;
+padding: 20px 26px 0 26px!important;
 }
 
 .cky-btn-do-not-sell{

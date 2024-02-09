@@ -1,3 +1,39 @@
 <?php
+/**
+ * The template for displaying all single posts
+ *
+ * @link    https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ *
+ * @package zakra
+ */
 
-do_shortcode('[elementor-template id="7042"]');
+get_header();
+?>
+
+	<main id="zak-primary" class="zak-primary">
+		<?php echo apply_filters( 'zakra_after_primary_start_filter', false ); // WPCS: XSS OK. ?>
+
+		<?php
+		while ( have_posts() ) :
+			the_post();
+		
+         if($_GET['action']=="elementor"){  
+			the_content();
+		 } 
+            echo do_shortcode('[elementor-template id="7042"]'); 
+			do_action( 'zakra_after_single_post_content' );
+
+			// If comments are open or we have at least one comment, load up the comment template.
+			if ( comments_open() || get_comments_number() ) :
+				comments_template();
+			endif;
+
+		endwhile; // End of the loop.
+		?>
+
+		<?php echo apply_filters( 'zakra_after_primary_end_filter', false ); // // WPCS: XSS OK. ?>
+	</main><!-- /.zak-primary -->
+
+<?php
+get_sidebar();
+get_footer();
