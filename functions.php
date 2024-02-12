@@ -187,9 +187,9 @@ global $wpdb, $table_prefix;
 //Elementor form custom UTM data in mail
 add_action('elementor_pro/forms/wp_mail_message',function($email_text){
 	$source = empty(sanitize_text_field($_POST['USOURCE'])) ? 'direct' : sanitize_text_field($_POST['USOURCE']);
-		$email_text .= "<b>Source</b>: ".$source."<br>";
-		$email_text .= "<b>Campaign</b>: ".sanitize_text_field($_POST['UCAMPAIGN'])."<br>";
-		$email_text .= "<b>Ad Group</b>: ".sanitize_text_field($_POST['UMEDIUM'])."<br>";
+		$email_text .= "Source: ".$source."<br>";
+		$email_text .= "Campaign: ".sanitize_text_field($_POST['UCAMPAIGN'])."<br>";
+		$email_text .= "Ad Group: ".sanitize_text_field($_POST['UMEDIUM'])."<br>";
 	return $email_text;
 });
 
