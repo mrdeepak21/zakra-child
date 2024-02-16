@@ -159,6 +159,7 @@ add_shortcode('email_recipients',function(){
 	if(get_site_url()==(is_ssl()?'https':'http').'://cobra.sterlingadministration.com'){
 		$emails = 'shavee.kapoor@sterlingadministration.com,
 		Duarte.Batista@sterlingadministration.com,
+		alison.eade@sterlingadministration.com,
 		marketing@heigh10.com,
 		cobrasales@sterlingadministration.com';
 	}
