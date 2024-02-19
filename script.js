@@ -147,6 +147,9 @@ function phone_number_mask() {
   myfield.setSelectionRange(theLastPos, theLastPos);
 }
 
-myfield.onkeypress = validate_int;
-myfield.setAttribute('title', 'Phone format: ###-###-####');
-myfield.onkeyup = phone_number_mask;
+
+if(myfield!==null){
+  myfield.onkeypress = validate_int;
+  myfield.setAttribute('title', 'Phone format: ###-###-####');
+  myfield.onkeyup = phone_number_mask;
+}
