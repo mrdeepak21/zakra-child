@@ -71,6 +71,12 @@ padding: 20px 26px 0 26px!important;
   padding: 5px 10px 10px 10px;
 }
 
+@media (max-width:767px){
+  .dynamic-text {
+    font-size: 50px;
+  }
+}
+
 /* */
 
 .header-bar-social-icons {
@@ -309,4 +315,14 @@ button[type='submit']:hover {
 .timeline .is-visible .timeline__wrap {
   opacity: 1;
   transform: translateY(0);
+}
+
+.elementor-widget .elementor-icon-list-item, .elementor-widget .elementor-icon-list-item a{
+	font-size: initial!important;
+}
+
+.rt-reading-time{
+font-size: 18px;
+padding-left: 10px;
+color: #888;
 }
