@@ -330,3 +330,7 @@ color: #888;
 .navigation.post-navigation{
   display: none;
 }
+
+.elementor-toc__header{
+	display: none!important;
+}
