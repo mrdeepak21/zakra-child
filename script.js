@@ -47,10 +47,10 @@ function navHighlighter() {
     let sectionId = current.getAttribute("id");
 
 
-    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight &&  document.querySelector(".sticky-nav a[href*=" + sectionId + "]")) {
       document.querySelector(".sticky-nav a[href*=" + sectionId + "]").classList.add("active");
     } else {
-      document.querySelector(".sticky-nav a[href*=" + sectionId + "]").classList.remove("active");
+     document.querySelector(".sticky-nav a[href*=" + sectionId + "]") &&  document.querySelector(".sticky-nav a[href*=" + sectionId + "]").classList.remove("active");
     }
   });
 }
