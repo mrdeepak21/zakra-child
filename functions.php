@@ -239,3 +239,11 @@ add_action( 'elementor_pro/forms/validation/tel', function ( $field, $record, $a
 add_shortcode('_current_year',function(){
 	return date('Y');
 });
+
+//Meeting Btn
+add_action('zakra_action_before_content',function(){
+	 global $post;
+	if(!is_front_page() && $post->post_name!=="schedule-a-meeting"){
+	echo '<a class="meeting" href="/schedule-a-meeting/"><i class="far fa-calendar-alt"></i>Schedule COBRA Demo</a>';
+	}
+});
